@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title>Portmonee Elegant</title>
+  <desc>Elegantes Portmonee in warmer Markenfarbe.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7fa"/>
+      <stop offset="100%" stop-color="#fde9f1"/>
+    </linearGradient>
+    <linearGradient id="wallet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#74d4d4"/>
+      <stop offset="100%" stop-color="#4fa9a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" rx="44" fill="url(#bg)"/>
+  <circle cx="930" cy="260" r="170" fill="#d68aa0" opacity="0.10"/>
+  <circle cx="230" cy="1200" r="180" fill="#74d4d4" opacity="0.12"/>
+  <rect x="170" y="220" width="860" height="920" rx="52" fill="#fff" stroke="rgba(44,44,44,0.08)"/>
+  <path d="M310 530c0-44 36-80 80-80h420c44 0 80 36 80 80v330c0 44-36 80-80 80H390c-44 0-80-36-80-80V530Z" fill="url(#wallet)"/>
+  <path d="M350 612h460" stroke="rgba(255,255,255,0.34)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M350 690h360" stroke="rgba(255,255,255,0.16)" stroke-width="12" stroke-linecap="round"/>
+  <text x="600" y="1220" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700" fill="#4fa9a9">Elegant</text>
+  <text x="600" y="1280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#666067">Fein und hochwertig</text>
+</svg>

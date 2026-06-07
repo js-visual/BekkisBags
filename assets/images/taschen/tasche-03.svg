@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title>Shopper</title>
+  <desc>Großzügige Shopper-Tasche mit hochwertiger, schlichter Optik.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7fa"/>
+      <stop offset="100%" stop-color="#fff3f7"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d68aa0"/>
+      <stop offset="100%" stop-color="#74d4d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" rx="44" fill="url(#bg)"/>
+  <circle cx="960" cy="220" r="170" fill="#74d4d4" opacity="0.10"/>
+  <circle cx="220" cy="1220" r="180" fill="#d68aa0" opacity="0.10"/>
+  <rect x="150" y="220" width="900" height="930" rx="56" fill="#fff" stroke="rgba(44,44,44,0.08)"/>
+  <path d="M330 420c0-96 76-172 170-172s170 76 170 172" fill="none" stroke="#b86b82" stroke-width="28" stroke-linecap="round"/>
+  <path d="M290 510c0-44 36-80 80-80h460c44 0 80 36 80 80v400c0 44-36 80-80 80H370c-44 0-80-36-80-80V510Z" fill="url(#bag)"/>
+  <path d="M352 590h500" stroke="rgba(255,255,255,0.38)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M385 688h434" stroke="rgba(255,255,255,0.18)" stroke-width="12" stroke-linecap="round"/>
+  <text x="600" y="1230" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700" fill="#b86b82">Shopper</text>
+  <text x="600" y="1290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#666067">Viel Platz für jeden Tag</text>
+</svg>

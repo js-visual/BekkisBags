@@ -1,0 +1,77 @@
+[
+  {
+    "category": "Taschen",
+    "image": "tasche-01.svg",
+    "title": "Handtasche"
+  },
+  {
+    "category": "Taschen",
+    "image": "tasche-02.svg",
+    "title": "Alltagsbegleiter"
+  },
+  {
+    "category": "Taschen",
+    "image": "tasche-03.svg",
+    "title": "Shopper"
+  },
+  {
+    "category": "Gassitaschen",
+    "image": "gassitasche-01.svg",
+    "title": "Gassitasche Kompakt"
+  },
+  {
+    "category": "Gassitaschen",
+    "image": "gassitasche-02.svg",
+    "title": "Gassitasche Urban"
+  },
+  {
+    "category": "Gassitaschen",
+    "image": "gassitasche-03.svg",
+    "title": "Gassitasche Natur"
+  },
+  {
+    "category": "Rucksäcke",
+    "image": "rucksack-01.svg",
+    "title": "Rucksack Klassik"
+  },
+  {
+    "category": "Rucksäcke",
+    "image": "rucksack-02.svg",
+    "title": "Rucksack Weekend"
+  },
+  {
+    "category": "Rucksäcke",
+    "image": "rucksack-03.svg",
+    "title": "Rucksack Mini"
+  },
+  {
+    "category": "Portmonees",
+    "image": "portmonee-01.svg",
+    "title": "Portmonee Kompakt"
+  },
+  {
+    "category": "Portmonees",
+    "image": "portmonee-02.svg",
+    "title": "Portmonee Elegant"
+  },
+  {
+    "category": "Portmonees",
+    "image": "portmonee-03.svg",
+    "title": "Portmonee Floral"
+  },
+  {
+    "category": "Accessoires",
+    "image": "accessoire-01.svg",
+    "title": "Schlüsselband"
+  },
+  {
+    "category": "Accessoires",
+    "image": "accessoire-02.svg",
+    "title": "Kosmetiktasche"
+  },
+  {
+    "category": "Accessoires",
+    "image": "accessoire-03.svg",
+    "title": "Etui"
+  }
+]

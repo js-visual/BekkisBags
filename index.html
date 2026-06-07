@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handgenäht mit Liebe</title>
+  <meta name="description" content="BekkisBags präsentiert handgenähte Taschen, Rucksäcke, Portmonees und Accessoires als stilvolles Portfolio mit Kontaktmöglichkeit.">
+  <meta name="keywords" content="BekkisBags, Taschen, Rucksäcke, Portmonees, Accessoires, handgenäht, Handmade, Portfolio">
+  <meta name="theme-color" content="#d68aa0">
+  <meta property="og:title" content="Handgenäht mit Liebe">
+  <meta property="og:description" content="Portfolio für handgefertigte Taschen, Rucksäcke, Portmonees und kreative Näharbeiten.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Handgenäht mit Liebe">
+  <meta name="twitter:description" content="Portfolio für handgefertigte Taschen, Rucksäcke, Portmonees und kreative Näharbeiten.">
+  <meta name="twitter:image" content="assets/images/og-image.svg">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/darkmode.js" defer></script>
+  <script src="js/markets.js" defer></script>
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="BekkisBags Startseite">
+        <span class="brand__name">BekkisBags</span>
+        <span class="brand__tagline">Handgenäht mit Liebe</span>
+      </a>
+
+      <div class="header-spacer"></div>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menü</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" data-site-nav aria-label="Hauptnavigation">
+        <ul class="site-nav__list">
+          <li><a class="nav-link" href="index.html">Startseite</a></li>
+          <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="theme-toggle__dot" aria-hidden="true"></span>
+        <span class="theme-toggle__label" data-theme-label>Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhalt" class="site-main">
+    <section class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title">Handmade mit Stil und Liebe</h1>
+          <p class="hero__text">
+            <strong>Unikate, die dich jeden Tag begleiten.</strong>
+          </p>
+
+          <div class="home-actions">
+            <a class="button button--primary" href="portfolio.html">Portfolio entdecken</a>
+            <a class="button button--ghost" href="kontakt.html">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="maerkte">
+      <div class="container" data-markets data-markets-json="data/markets.json">
+        <div class="section__heading">
+          <span class="eyebrow">Kommende Märkte</span>
+          <h2 class="section__title">Wo du BekkisBags live finden kannst</h2>
+        </div>
+        <div class="markets-grid" data-markets-list></div>
+        <p class="empty-state" data-markets-empty hidden>Aktuell sind keine Märkte eingetragen.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="panel">
+          <span class="eyebrow">Kontakt</span>
+          <h2 class="section__title">Du hast eine Frage?</h2>
+          <p class="section__intro">
+            Dann schreib mir gerne eine Nachricht per Kontaktformular, ich werde so bald wie möglich antworten!
+          </p>
+          <div class="home-actions">
+            <a class="button button--primary" href="kontakt.html">Zur Kontaktseite</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2 class="footer-title">BekkisBags</h2>
+        <p class="section__intro">
+          Handgenäht mit Liebe.
+        </p>
+        <p class="section__intro">
+          © 2026 BekkisBags
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Navigation</h2>
+        <ul class="footer-nav">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Social Media</h2>
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/bekkisbags/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61571619514822" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

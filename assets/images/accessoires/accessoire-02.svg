@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title>Kosmetiktasche</title>
+  <desc>Stilvolle Kosmetiktasche mit weicher Silhouette.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffafc"/>
+      <stop offset="100%" stop-color="#fde9f1"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#74d4d4"/>
+      <stop offset="100%" stop-color="#4fa9a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" rx="44" fill="url(#bg)"/>
+  <circle cx="930" cy="260" r="170" fill="#74d4d4" opacity="0.10"/>
+  <circle cx="230" cy="1210" r="180" fill="#d68aa0" opacity="0.10"/>
+  <rect x="170" y="220" width="860" height="920" rx="52" fill="#fff" stroke="rgba(44,44,44,0.08)"/>
+  <path d="M320 560c0-52 42-94 94-94h372c52 0 94 42 94 94v260c0 52-42 94-94 94H414c-52 0-94-42-94-94V560Z" fill="url(#acc)"/>
+  <path d="M390 560c0-40 32-72 72-72h276c40 0 72 32 72 72" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="1220" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700" fill="#4fa9a9">Kosmetiktasche</text>
+  <text x="600" y="1280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#666067">Elegant und vielseitig</text>
+</svg>

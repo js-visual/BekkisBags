@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Das Portfolio von BekkisBags mit filterbarer Galerie für Taschen, Gassitaschen, Rucksäcke, Portmonees und Accessoires.">
+  <meta name="keywords" content="BekkisBags, Portfolio, Taschen, Gassitaschen, Rucksäcke, Portmonees, Accessoires">
+  <meta name="theme-color" content="#d68aa0">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:description" content="Filterbares Portfolio mit handgefertigten Arbeiten von BekkisBags.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/darkmode.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="BekkisBags Startseite">
+        <span class="brand__name">BekkisBags</span>
+        <span class="brand__tagline">Handgenäht mit Stoff und Liebe</span>
+      </a>
+
+      <div class="header-spacer"></div>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menü</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" data-site-nav aria-label="Hauptnavigation">
+        <ul class="site-nav__list">
+          <li><a class="nav-link" href="index.html">Startseite</a></li>
+          <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="theme-toggle__dot" aria-hidden="true"></span>
+        <span class="theme-toggle__label" data-theme-label>Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhalt" class="site-main legal-page">
+
+
+    <section class="section section--soft">
+      <div class="container" data-portfolio data-portfolio-json="data/portfolio.json">
+        <div class="portfolio-filters" role="tablist" aria-label="Portfolio Kategorien">
+          <button class="filter-button is-active" type="button" data-portfolio-filter="Alle" aria-pressed="true">Alle</button>
+          <button class="filter-button" type="button" data-portfolio-filter="Taschen" aria-pressed="false">Taschen</button>
+          <button class="filter-button" type="button" data-portfolio-filter="Gassitaschen" aria-pressed="false">Gassitaschen</button>
+          <button class="filter-button" type="button" data-portfolio-filter="Rucksäcke" aria-pressed="false">Rucksäcke</button>
+          <button class="filter-button" type="button" data-portfolio-filter="Portmonees" aria-pressed="false">Portmonees</button>
+          <button class="filter-button" type="button" data-portfolio-filter="Accessoires" aria-pressed="false">Accessoires</button>
+        </div>
+
+        <div class="gallery-wrap">
+          <div class="gallery-grid" data-portfolio-grid></div>
+          <p class="empty-state" data-portfolio-empty hidden>Für diese Kategorie sind aktuell noch keine Bilder hinterlegt.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2 class="footer-title">BekkisBags</h2>
+        <p class="section__intro">
+          Handgenäht mit Liebe.
+        </p>
+        <p class="section__intro">
+          © 2026 BekkisBags
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Navigation</h2>
+        <ul class="footer-nav">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Social Media</h2>
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/bekkisbags/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61571619514822" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

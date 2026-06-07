@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title>Gassitasche Kompakt</title>
+  <desc>Kompakte Gassitasche mit klarer, funktionaler Form.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffafc"/>
+      <stop offset="100%" stop-color="#effcfc"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#74d4d4"/>
+      <stop offset="100%" stop-color="#d68aa0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" rx="44" fill="url(#bg)"/>
+  <circle cx="920" cy="260" r="170" fill="#d68aa0" opacity="0.10"/>
+  <circle cx="230" cy="1200" r="170" fill="#74d4d4" opacity="0.12"/>
+  <rect x="180" y="250" width="840" height="880" rx="52" fill="#fff" stroke="rgba(44,44,44,0.08)"/>
+  <path d="M392 468c0-82 66-148 148-148s148 66 148 148" fill="none" stroke="#74d4d4" stroke-width="26" stroke-linecap="round"/>
+  <path d="M330 526c0-40 32-72 72-72h396c40 0 72 32 72 72v362c0 40-32 72-72 72H402c-40 0-72-32-72-72V526Z" fill="url(#bag)"/>
+  <circle cx="600" cy="744" r="74" fill="rgba(255,255,255,0.24)"/>
+  <path d="M560 744h80" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+  <text x="600" y="1220" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700" fill="#4fa9a9">Kompakt</text>
+  <text x="600" y="1280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#666067">Praktisch und handlich</text>
+</svg>

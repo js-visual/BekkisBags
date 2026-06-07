@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title>BekkisBags Social Preview</title>
+  <desc>Elegantes Preview-Bild für OpenGraph und Twitter Cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffafc"/>
+      <stop offset="52%" stop-color="#fdeaf0"/>
+      <stop offset="100%" stop-color="#effcfc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d68aa0"/>
+      <stop offset="100%" stop-color="#74d4d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#bg)"/>
+  <circle cx="1030" cy="130" r="112" fill="#d68aa0" opacity="0.12"/>
+  <circle cx="170" cy="510" r="150" fill="#74d4d4" opacity="0.12"/>
+  <rect x="665" y="135" width="360" height="380" rx="40" fill="#fff" stroke="rgba(44,44,44,0.12)"/>
+  <path d="M745 203c0-19 15-34 34-34h152c19 0 34 15 34 34v170c0 19-15 34-34 34H779c-19 0-34-15-34-34V203Z" fill="url(#accent)" opacity="0.92"/>
+  <path d="M823 182c0-17 14-31 31-31s31 14 31 31" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M740 390h200" stroke="rgba(255,255,255,0.42)" stroke-width="14" stroke-linecap="round"/>
+  <text x="120" y="205" font-family="Poppins, Arial, sans-serif" font-size="72" font-weight="700" fill="#b86b82">BekkisBags</text>
+  <text x="120" y="280" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500" fill="#2c2c2c">Handgenäht mit Stoff und Liebe</text>
+  <text x="120" y="350" font-family="Inter, Arial, sans-serif" font-size="24" fill="#666067">Portfolio für Taschen, Rucksäcke, Portmonees und Accessoires.</text>
+  <rect x="120" y="410" width="250" height="62" rx="31" fill="#d68aa0"/>
+  <text x="245" y="451" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">Portfolio entdecken</text>
+</svg>

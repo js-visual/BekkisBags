@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt</title>
+  <meta name="description" content="Kontaktformular für BekkisBags mit Web3Forms.">
+  <meta name="keywords" content="BekkisBags, Kontakt, Web3Forms, Formular">
+  <meta name="theme-color" content="#d68aa0">
+  <meta property="og:title" content="Kontakt | BekkisBags">
+  <meta property="og:description" content="Schreibe BekkisBags über das Kontaktformular.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/darkmode.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="BekkisBags Startseite">
+        <span class="brand__name">BekkisBags</span>
+        <span class="brand__tagline">Handgenäht mit Stoff und Liebe</span>
+      </a>
+      <div class="header-spacer"></div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menü</span>
+      </button>
+      <nav id="site-nav" class="site-nav" data-site-nav aria-label="Hauptnavigation">
+        <ul class="site-nav__list">
+          <li><a class="nav-link" href="index.html">Startseite</a></li>
+          <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="theme-toggle__dot" aria-hidden="true"></span>
+        <span class="theme-toggle__label" data-theme-label>Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhalt" class="site-main legal-page">
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="panel">
+          <span class="eyebrow">Kontakt</span>
+          <h1 class="section__title">Erzähl mir von deiner Idee</h1>
+          <p class="section__intro">
+            Ob individuelle Anfertigung, Fragen zu meinen Produkten oder Informationen zu kommenden Märkten, 
+            schreib mir einfach über das Kontaktformular.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <strong>So erreichst Du mich</strong>
+              Eine E-Mail-Adresse oder Telefonnummer genügt, damit ich mich bei dir melden kann.
+            </li>
+            <li>
+              <strong>Antwortzeit</strong>
+              Ich versuche so schnell wie möglich zu antworten.
+            </li>
+            <li>
+              <strong>Ein kleiner Hinweis</strong>
+              Jedes Stück entsteht mit viel Liebe zum Detail und wird individuell gefertigt. 
+              Deshalb freue ich mich über möglichst genau Angaben zu deinen Vorstellungen.
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <form class="form" data-contact-form action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="1a6e6c06-c015-4e72-b211-84cb80d9e97d">
+            <input type="hidden" name="from_name" value="BekkisBags Website">
+            <input type="hidden" name="subject" value="Neue Kontaktanfrage über BekkisBags">
+            <input type="hidden" name="email" value="" data-field-reply-email>
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
+
+            <div class="form__message" data-form-message role="status" aria-live="polite" hidden></div>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Max Mustermann" required data-field-name>
+              <span class="field__error" data-error-for="name"></span>
+            </div>
+
+            <div class="field">
+              <label for="contact">E-Mail oder Telefonnummer</label>
+              <input id="contact" name="contact" type="text" autocomplete="email" placeholder="mustermann@gmail.com" required data-field-contact>
+              <span class="field__error" data-error-for="contact"></span>
+            </div>
+
+            <div class="field">
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="message" placeholder="Hallo, mich würde interessieren..." required data-field-message></textarea>
+              <span class="field__error" data-error-for="message"></span>
+            </div>
+
+            <p class="form__meta">
+              Mit dem Absenden stimmst du zu, dass deine Angaben zur Bearbeitung der Anfrage verwendet werden.
+            </p>
+
+            <div class="form__actions">
+              <button class="button button--primary" type="submit">Nachricht senden</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2 class="footer-title">BekkisBags</h2>
+        <p class="section__intro">
+          Handgenäht mit Liebe.
+        </p>
+        <p class="section__intro">
+          © 2026 BekkisBags
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Navigation</h2>
+        <ul class="footer-nav">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Social Media</h2>
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/bekkisbags/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61571619514822" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

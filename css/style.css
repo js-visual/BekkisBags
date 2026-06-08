@@ -1078,14 +1078,19 @@ body.page-home .site-header {
 }
 
 .footer-credit {
-  margin-top: 1rem;
-  font-size: 0.85rem;
+  max-width: var(--container);
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
 .footer-credit a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: 600;
+  transition: color var(--transition);
 }
 
 .footer-credit a:hover {

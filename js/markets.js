@@ -1,12 +1,3 @@
-/* ==========================================================================
-   BekkisBags - Märkte aus JSON laden
-   --------------------------------------------------------------------------
-   Die Liste bleibt komplett datengetrieben:
-   - Wenn `data/markets.json` Einträge enthält, werden Karten erstellt.
-   - Wenn die Datei leer ist oder keine zukünftigen Märkte enthält, erscheint
-     ein freundlicher Leerzustand.
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
   const host = document.querySelector("[data-markets]");
   if (!host) {
@@ -35,10 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sorted = items
       .map((item) => ({
         ...item,
-        parsedDate: (() => {
-           const [day, month, year] = item.date.split(".");
-           return new Date(year, month - 1, day);
-         })(),
+        parsedDate: new Date(item.date),
       }))
       .filter((item) => !Number.isNaN(item.parsedDate.getTime()))
       .sort((a, b) => a.parsedDate - b.parsedDate)

@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const sorted = items
       .map((item) => ({
         ...item,
-        parsedDate: new Date(item.date),
+        parsedDate: (() => {
+           const [day, month, year] = item.date.split(".");
+           return new Date(year, month - 1, day);
+         })(),
       }))
       .filter((item) => !Number.isNaN(item.parsedDate.getTime()))
       .sort((a, b) => a.parsedDate - b.parsedDate)

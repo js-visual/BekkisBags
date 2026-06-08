@@ -1,3 +1,13 @@
+/* ==========================================================================
+   BekkisBags - Grundlayout und Komponenten
+   --------------------------------------------------------------------------
+   Diese Datei enthält die komplette helle Basis der Website:
+   - Farben und Typografie
+   - Header, Navigation und Footer
+   - Hero, Karten, Formulare und Galerie
+   - Responsive Layout für Mobile, Tablet und Desktop
+   ========================================================================== */
+
 :root {
   --primary: #d68aa0;
   --primary-dark: #b86b82;
@@ -1075,24 +1085,4 @@ body.page-home .site-header {
   .hide-on-mobile {
     display: none;
   }
-}
-
-.footer-credit {
-  max-width: var(--container);
-  margin: 2rem auto 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.footer-credit a {
-  color: var(--primary-dark);
-  font-weight: 600;
-  transition: color var(--transition);
-}
-
-.footer-credit a:hover {
-  color: var(--primary);
 }

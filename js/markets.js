@@ -1,74 +1,77 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const host = document.querySelector("[data-markets]");
-  if (!host) {
-    return;
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('[data-markets]');
+  if (!container) return;
+
+  const listElement = container.querySelector('[data-markets-list]');
+  const emptyStateElement = container.querySelector('[data-markets-empty]');
+  const jsonUrl = container.getAttribute('data-markets-json') || 'data/markets.json';
+
+  // Hilfsfunktion: Wandelt Datumsstrings (auch Intervalle) in ein gültiges JS-Date-Objekt um
+  function parseMarketDate(dateString) {
+    // Falls ein Intervall wie "04.12.2026-06.12.2026" existiert, nutzen wir das Enddatum für den Ablauf-Check
+    let dateToParse = dateString;
+    if (dateString.includes('-')) {
+      dateToParse = dateString.split('-')[1].trim();
+    }
+    
+    const parts = dateToParse.split('.');
+    if (parts.length === 3) {
+      // Format: TT.MM.JJJJ -> Achtung: Monat ist im JS-Date 0-basiert (Monat - 1)
+      return new Date(parts[2], parts[1] - 1, parts[0], 23, 59, 59);
+    }
+    return new Date(0); // Fallback für ungültige Formate
   }
 
-  const list = host.querySelector("[data-markets-list]");
-  const empty = host.querySelector("[data-markets-empty]");
-  const source = host.dataset.marketsJson || "data/markets.json";
-
-  const renderEmpty = (message = "Aktuell sind keine Märkte eingetragen.") => {
-    if (empty) {
-      empty.textContent = message;
-      empty.hidden = false;
-    }
-    if (list) {
-      list.innerHTML = "";
-    }
-  };
-
-  const renderMarkets = (items) => {
-    const dateFormatter = new Intl.DateTimeFormat("de-DE", {
-      dateStyle: "medium",
-    });
-
-    const sorted = items
-      .map((item) => ({
-        ...item,
-        parsedDate: new Date(item.date),
-      }))
-      .filter((item) => !Number.isNaN(item.parsedDate.getTime()))
-      .sort((a, b) => a.parsedDate - b.parsedDate)
-      .filter((item) => item.parsedDate >= new Date(new Date().toDateString()));
-
-    if (!sorted.length) {
-      renderEmpty();
-      return;
-    }
-
-    if (empty) {
-      empty.hidden = true;
-    }
-
-    list.innerHTML = sorted
-      .map(
-        (item) => `
-          <article class="market-card">
-            <span class="market-card__date">${dateFormatter.format(item.parsedDate)}</span>
-            <h3 class="market-card__title">${item.name}</h3>
-            <p class="market-card__meta">${item.location}</p>
-          </article>
-        `
-      )
-      .join("");
-  };
-
-  fetch(source, { cache: "no-store" })
-    .then((response) => {
+  // Märkte laden und verarbeiten
+  fetch(jsonUrl)
+    .then(response => {
       if (!response.ok) {
-        throw new Error("markets-json-not-found");
+        throw new Error('Netzwerk-Antwort war nicht ok');
       }
       return response.json();
     })
-    .then((data) => {
-      if (!Array.isArray(data) || data.length === 0) {
-        renderEmpty();
+    .then(markets => {
+      const today = new Date();
+      // Setzt die Uhrzeit von heute auf 00:00:00, damit Märkte am heutigen Tag noch angezeigt werden
+      today.setHours(0, 0, 0, 0);
+
+      // 1. Filtern: Nur zukünftige oder heute stattfindende Märkte
+      // 2. Sortieren: Chronologisch aufsteigend
+      const upcomingMarkets = markets
+        .filter(market => parseMarketDate(market.date) >= today)
+        .sort((a, b) => parseMarketDate(a.date) - parseMarketDate(b.date));
+
+      // 3. Auf die nächsten 3 Termine begrenzen
+      const nextThreeMarkets = upcomingMarkets.slice(0, 3);
+
+      // Anzeige steuern
+      if (nextThreeMarkets.length === 0) {
+        if (emptyStateElement) emptyStateElement.removeAttribute('hidden');
+        if (listElement) listElement.innerHTML = '';
         return;
       }
-      renderMarkets(data);
+
+      // Empty State verstecken falls vorhanden
+      if (emptyStateElement) emptyStateElement.setAttribute('hidden', '');
+
+      // HTML für die Märkte generieren (passend zu deinen CSS-Klassen)
+      const htmlOutput = nextThreeMarkets.map(market => {
+        return `
+          <article class="market-card">
+            <span class="market-card__date">${market.date}</span>
+            <h3 class="market-card__title">${market.name}</h3>
+            <p class="market-card__meta">${market.location}</p>
+          </article>
+        `;
+      }).join('');
+
+      if (listElement) {
+        listElement.innerHTML = htmlOutput;
+      }
     })
-    .catch(() => {
-      renderEmpty();
+    .catch(error => {
+      console.error('Fehler beim Laden der Markt-Daten:', error);
+      // Im Fehlerfall zeigen wir den Empty State als Fallback
+      if (emptyStateElement) emptyStateElement.removeAttribute('hidden');
     });
 });

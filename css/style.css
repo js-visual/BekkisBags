@@ -1096,3 +1096,30 @@ body.page-home .site-header {
 .footer-credit a:hover {
   color: var(--primary);
 }
+
+.about-panel {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-panel__image img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .about-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel__image {
+    order: -1;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}

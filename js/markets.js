@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }))
       .filter((item) => !Number.isNaN(item.parsedDate.getTime()))
       .sort((a, b) => a.parsedDate - b.parsedDate)
-      .filter((item) => item.parsedDate >= new Date(new Date().toDateString()))
-      .slice(0, 3);
+      .filter((item) => item.parsedDate >= new Date(new Date().toDateString()));
 
     if (!sorted.length) {
       renderEmpty();

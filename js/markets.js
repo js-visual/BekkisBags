@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const listElement = container.querySelector('[data-markets-list]');
   const emptyStateElement = container.querySelector('[data-markets-empty]');
-  const jsonUrl = container.getAttribute('data-markets-json') || 'data/markets.json';
+  
+  // Erzwinge hier den korrekten Pfad ausgehend von der index.html im Root-Ordner
+  const jsonUrl = 'data/markets.json';
 
   // Hilfsfunktion: Wandelt Datumsstrings (auch Intervalle) in ein gültiges JS-Date-Objekt um
   function parseMarketDate(dateString) {
-    // Falls ein Intervall wie "04.12.2026-06.12.2026" existiert, nutzen wir das Enddatum für den Ablauf-Check
     let dateToParse = dateString;
+    
+    // Falls ein Intervall wie "04.12.2026-06.12.2026" existiert, nutzen wir das Enddatum
     if (dateString.includes('-')) {
       dateToParse = dateString.split('-')[1].trim();
     }
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parts = dateToParse.split('.');
     if (parts.length === 3) {
       // Format: TT.MM.JJJJ -> Achtung: Monat ist im JS-Date 0-basiert (Monat - 1)
+      // Setzt die Uhrzeit auf das Ende des Tages (23:59:59)
       return new Date(parts[2], parts[1] - 1, parts[0], 23, 59, 59);
     }
     return new Date(0); // Fallback für ungültige Formate
@@ -26,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch(jsonUrl)
     .then(response => {
       if (!response.ok) {
-        throw new Error('Netzwerk-Antwort war nicht ok');
+        throw new Error(`Märkte konnten nicht geladen werden. Status: ${response.status}`);
       }
       return response.json();
     })
     .then(markets => {
       const today = new Date();
-      // Setzt die Uhrzeit von heute auf 00:00:00, damit Märkte am heutigen Tag noch angezeigt werden
+      // Setzt die Uhrzeit von heute auf 00:00:00 für den reinen Tagesvergleich
       today.setHours(0, 0, 0, 0);
 
       // 1. Filtern: Nur zukünftige oder heute stattfindende Märkte
@@ -51,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Empty State verstecken falls vorhanden
+      // Empty State verstecken
       if (emptyStateElement) emptyStateElement.setAttribute('hidden', '');
 
-      // HTML für die Märkte generieren (passend zu deinen CSS-Klassen)
+      // HTML für die Märkte generieren
       const htmlOutput = nextThreeMarkets.map(market => {
         return `
           <article class="market-card">
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => {
       console.error('Fehler beim Laden der Markt-Daten:', error);
-      // Im Fehlerfall zeigen wir den Empty State als Fallback
+      // Im Fehlerfall zeigen wir den Empty State als sicheren Fallback
       if (emptyStateElement) emptyStateElement.removeAttribute('hidden');
     });
 });

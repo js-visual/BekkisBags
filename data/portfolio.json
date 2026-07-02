@@ -17,61 +17,51 @@
   {
     "category": "Gassitaschen",
     "image": "gassitasche-01.png",
-    "title": "Gassitasche Kompakt"
+    "title": "Gassitasche Flitzer"
   },
   {
     "category": "Gassitaschen",
     "image": "gassitasche-02.png",
-    "title": "Gassitasche Urban"
+    "title": "Gassitasche Schlaumeier"
   },
   {
     "category": "Gassitaschen",
     "image": "gassitasche-03.png",
-    "title": "Gassitasche Natur"
+    "title": "Gassitasche Sturkopf"
   },
   {
     "category": "Rucksäcke",
-    "image": "rucksack-01.svg",
-    "title": "Rucksack Klassik"
-  },
-  {
-    "category": "Rucksäcke",
-    "image": "rucksack-02.svg",
-    "title": "Rucksack Weekend"
-  },
-  {
-    "category": "Rucksäcke",
-    "image": "rucksack-03.svg",
-    "title": "Rucksack Mini"
+    "image": "rucksack-01.png",
+    "title": "Rucksack Katze"
   },
   {
     "category": "Portmonees",
-    "image": "portmonee-01.svg",
-    "title": "Portmonee Kompakt"
+    "image": "portmonee-01.png",
+    "title": "Platzhalter"
   },
   {
     "category": "Portmonees",
-    "image": "portmonee-02.svg",
-    "title": "Portmonee Elegant"
+    "image": "portmonee-02.png",
+    "title": "Platzhalter"
   },
   {
     "category": "Portmonees",
-    "image": "portmonee-03.svg",
-    "title": "Portmonee Floral"
+    "image": "portmonee-03.png",
+    "title": "Platzhalter"
   },
   {
     "category": "Accessoires",
-    "image": "accessoire-01.svg",
-    "title": "Schlüsselband"
+    "image": "accessoire-01.png",
+    "title": "Platzhalter"
   },
   {
     "category": "Accessoires",
-    "image": "accessoire-02.svg",
-    "title": "Kosmetiktasche"
+    "image": "accessoire-02.png",
+    "title": "Platzhalter"
   },
   {
     "category": "Accessoires",
-    "image": "accessoire-03.svg",
-    "title": "Etui"
+    "image": "accessoire-03.png",
+    "title": "Platzhalter"
   }
 ]

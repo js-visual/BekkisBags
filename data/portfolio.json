@@ -1,32 +1,32 @@
 [
   {
     "category": "Taschen",
-    "image": "tasche-01.svg",
+    "image": "tasche-01.png",
     "title": "Handtasche"
   },
   {
     "category": "Taschen",
-    "image": "tasche-02.svg",
-    "title": "Alltagsbegleiter"
+    "image": "tasche-02.png",
+    "title": "Shoppertasche"
   },
   {
     "category": "Taschen",
-    "image": "tasche-03.svg",
-    "title": "Shopper"
+    "image": "tasche-03.png",
+    "title": "Sportbeutel"
   },
   {
     "category": "Gassitaschen",
-    "image": "gassitasche-01.svg",
+    "image": "gassitasche-01.png",
     "title": "Gassitasche Kompakt"
   },
   {
     "category": "Gassitaschen",
-    "image": "gassitasche-02.svg",
+    "image": "gassitasche-02.png",
     "title": "Gassitasche Urban"
   },
   {
     "category": "Gassitaschen",
-    "image": "gassitasche-03.svg",
+    "image": "gassitasche-03.png",
     "title": "Gassitasche Natur"
   },
   {
